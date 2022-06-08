@@ -32,9 +32,9 @@ Pre-requisite:
 
 4. Below parameters needs to be change for your project:
 
-    - Replace wherever project name and region on terraform files with respect to your account.
-    - network parameter need to change as per your project on network-firewall.tf
-    - instance groups under group paramter also need to change as per your project on gcp_lb.tf
+    - Replace wherever `project name` and `region` on terraform files with respect to your account.
+    - `network` parameter need to change as per your project on `network-firewall.tf`
+    - instance groups under `group` paramter also need to change as per your project on `gcp_lb.tf`
 
 
 5. Initiate the teraform configuration without errors.
