@@ -28,7 +28,7 @@ resource "google_compute_instance" "web-server-1" {
     test = "Webserver1"
   }
 
-  metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential apache2; sudo echo Hello World > /var/www/html/index.html"
+  metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential apache2; sudo echo Hello World 1 > /var/www/html/index.html"
 }
 
 
@@ -55,5 +55,5 @@ resource "google_compute_instance" "web-server-2" {
     test = "Webserver2"
   }
 
-  metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential apache2; sudo echo Hello World > /var/www/html/index.html"
+  metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential apache2; sudo echo Hello World 2 > /var/www/html/index.html"
 }
