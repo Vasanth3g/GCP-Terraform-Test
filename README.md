@@ -26,7 +26,7 @@ Pre-requisite:
     }
     ```
 
-3. Replace the file into auth directory.
+3. Replace the credentials file into auth directory.
 
     ``` cp <file> auth/<file> ```
 
