@@ -19,17 +19,9 @@ resource "google_compute_instance" "web-server-1" {
     }
   }
 
- /* // Local SSD disk
-  scratch_disk {
-    interface = "SCSI"
-  }
-*/
   network_interface {
     network = "default"
 
-    access_config {
-      // Ephemeral public IP
-    }
   }
 
   metadata = {
@@ -37,13 +29,6 @@ resource "google_compute_instance" "web-server-1" {
   }
 
   metadata_startup_script = "sudo apt-get update; sudo apt-get install -yq build-essential apache2; sudo echo Hello World > /var/www/html/index.html"
-/*
-  service_account {
-    # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = google_service_account.default.email
-    scopes = ["cloud-platform"]
-  }
-*/
 }
 
 
@@ -62,17 +47,8 @@ resource "google_compute_instance" "web-server-2" {
     }
   }
 
- /* // Local SSD disk
-  scratch_disk {
-    interface = "SCSI"
-  }
-*/
   network_interface {
     network = "default"
-
-    access_config {
-      // Ephemeral public IP
-    }
   }
 
   metadata = {
