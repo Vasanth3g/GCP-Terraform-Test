@@ -1,12 +1,12 @@
 # GCP-Terraform-Test
-Terraform Webserver Load Balancer Deployment
+Terraform Webserver Load Balancer Deployment :
 
 Pre-requisite:
 
     - Terraform v1.1.9
     - GCP (with credentials)
     
-1. Clone the repo for setup GCP Load Balancer
+1. Clone the repo for setup GCP Load Balancer.
 
     ``` git clone https://github.com/Vasanth3g/GCP-Terraform-Test.git  ```
 
@@ -37,15 +37,15 @@ Pre-requisite:
     - instance groups under group paramter also need to change as per your project on gcp_lb.tf
 
 
-5. Initiate the teraform configuration without errors
+5. Initiate the teraform configuration without errors.
 
     ```terraform init ```
 
-6. Plan the teraform without errors
+6. Plan the teraform without errors.
 
     ``` terraform plan ```
 
-7. Above 5 & 6 th steps compiled then execute below step to apply resources in GCP
+7. Above 5 & 6 th steps compiled then execute below step to apply resources in GCP.
 
     ``` terraform apply --auto-approve ```
 
@@ -64,7 +64,7 @@ Pre-requisite:
     module.gce-lb-http.google_compute_target_http_proxy.default[0]: Refreshing state... [id=projects/true-loader-349707/global/targetHttpProxies/group-http-lb-http-proxy]
     module.gce-lb-http.google_compute_global_forwarding_rule.http[0]: Refreshing state... [id=projects/true-loader-349707/global/forwardingRules/group-http-lb]
     ```
-9. Run below command to get load balancer public IP like below
+9. Run below command to get load balancer public IP like below :
     ```
         vasanthm@Vasanths-MacBook-Air GCP % terraform show | grep ip_address
         ip_address            = "*.*.*.*"
